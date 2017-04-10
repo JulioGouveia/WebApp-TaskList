@@ -6,8 +6,6 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -23,24 +21,15 @@ public class User implements UserDetails {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private String email;
 
 	private String name;
-	private String email;
+
 	private String password;
 
 	@OneToMany(fetch = FetchType.EAGER)
-	private List<Role> role = new ArrayList<Role>();;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
+	private List<Role> role = new ArrayList<Role>();
+	
 	public String getName() {
 		return name;
 	}
@@ -68,6 +57,9 @@ public class User implements UserDetails {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+
+	// ------------------------------------------------
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

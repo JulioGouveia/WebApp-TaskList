@@ -19,9 +19,9 @@ public class UserDAO implements UserDetailsService {
 	private EntityManager manager;
 
 	@Override
-	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-		List<User> user = manager.createQuery("select u from User u where email =:email", User.class)
-				.setParameter(email, email).getResultList();
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		List<User> user = manager.createQuery("select u from User u where u.email =:email", User.class)
+				.setParameter("email", username).getResultList();
 		if (user.isEmpty())
 			throw new UsernameNotFoundException("Usuario invalido");
 

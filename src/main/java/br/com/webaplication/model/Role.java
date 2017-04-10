@@ -7,22 +7,22 @@ import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 public class Role implements GrantedAuthority {
-	
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private String roleName;
-	
+
 	public String getRoleName() {
 		return roleName;
 	}
-	
+
 	@Override
 	public String getAuthority() {
-		return  this.roleName;
+		return this.roleName;
 	}
 
 }

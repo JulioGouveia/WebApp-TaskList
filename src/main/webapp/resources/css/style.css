@@ -1,0 +1,55 @@
+@CHARSET "ISO-8859-1";
+
+#signIn {
+	position: fixed;
+	right: 20px;
+	top: 10px;
+}
+
+.taskList {
+	font-size: 20px;
+	position: relative;
+	left: -70px;
+}
+
+Body {
+	text-align: center;
+}
+
+#create {
+	position: fixed;
+	float: left;
+	right: 88px;
+	top: 10px;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -15px;
+}
+
+.navbar-nav>li>a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 20px;
+	top: 6px;
+}
+
+.class {
+	font-size: 30px;
+}
+
+.newTaskBtn {
+	position: fixed;
+	float: right;
+	right: 412px;
+	top: 159px;
+}
+
+.newTaskForm{
+	right: 20px;
+    position: relative;
+}

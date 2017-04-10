@@ -10,8 +10,19 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Task List - Web Application</title>
-	<c:url value="/WEB-INF/resources/css/" var="context" />
+	<c:url value="/resources/css/" var="context" />
+	<link rel="stylesheet" href="${context }style.css">
 	<link rel="stylesheet" href="${context }bootstrap.css">
 	<link rel="stylesheet" href="${context }bootstrap-theme.css">
 </head>
 <body>
+
+	<nav class="navbar navbar-default navbar-static-top">
+	  <div class="container">
+	  	<ul  class="nav navbar-nav">
+	  		<li><a href="${s:mvcUrl('HAC#home').build() }" class="taskList navbar-text">Task List</a></li>
+	   		<li><a href="${s:mvcUrl('LC#create').build() }" id="create">Create Account</a></li>
+	   		<li><a href="${s:mvcUrl('LC#login').build() }" id="signIn">Sign In</a></li>
+	   	</ul>
+	  </div>
+	</nav>
